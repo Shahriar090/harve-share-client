@@ -21,16 +21,14 @@ const Navbar = () => {
           </p>
         </div>
         <div className="donate-btn">
-          <button className="px-6 py-3 inline-flex items-center justify-center text-white outline-none bg-[#262222] font-medium">
-            Donate Now
-          </button>
+          <button className="btn-primary">Donate Now</button>
         </div>
       </div>
       {/* contact and donate button end */}
 
       {/* main nav contents start*/}
       <nav className="w-full max-w-screen-xl mx-auto h-full flex items-center lg:py-8">
-        <div className="nav-container flex justify-between w-full items-center px-4 lg:px-0">
+        <div className="nav-container flex justify-between w-full items-center px-2 lg:px-0">
           <div className="logo">
             <h1 className="text-2xl md:text-3xl font-semibold">
               Harve <span className="text-white lg:text-[#FF4800]">Share</span>
@@ -61,8 +59,8 @@ const Navbar = () => {
 
           {/* mobile drawer */}
           {isMobileMenuOpen && (
-            <div className="fixed top-12 right-0 z-20 w-full h-screen bg-white text-black">
-              <div className="nav-items flex flex-col items-center pt-10 gap-5">
+            <div className="fixed top-12 right-0 z-20 w-full h-screen bg-black bg-opacity-60 text-white">
+              <div className="nav-items flex flex-col items-center pt-16 gap-5">
                 {navItems.map((item, index) => (
                   <li key={index} className="uppercase font-medium ">
                     <Link to={item.link}>{item.label}</Link>

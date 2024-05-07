@@ -10,3 +10,19 @@ body {
   list-style: none;
   box-sizing: border-box;
 }
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 inline-flex items-center justify-center outline-none;
+    @apply bg-[#262222] text-white font-semibold;
+  }
+  .btn-primary-orange {
+    @apply px-6 py-3 inline-flex items-center justify-center outline-none rounded-full;
+    @apply bg-gradient-to-r from-orange-500 to-[#FF4800] text-white font-semibold;
+  }
+  .btn-outline {
+    @apply px-6 py-3 inline-flex items-center justify-center;
+    @apply border border-[#FF4800] rounded-full;
+    @apply hover:bg-[#FF4800] text-white font-semibold;
+  }
+}
