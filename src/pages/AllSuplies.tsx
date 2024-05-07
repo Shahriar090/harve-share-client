@@ -1,8 +1,10 @@
+import Container from "../shared/Container/Container";
+
 const AllSuplies = () => {
   return (
-    <div>
+    <Container>
       <h1>all supplies</h1>
-    </div>
+    </Container>
   );
 };
 
