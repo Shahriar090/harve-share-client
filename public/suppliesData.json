@@ -4,83 +4,95 @@
     "image": "https://media.istockphoto.com/id/872343048/photo/raw-rice-grain-and-dry-rice-plant-on-wooden-table.webp?b=1&s=170667a&w=0&k=20&c=_et6N6tanexzf0-4QUCkU5tgpExhhAusQPCgZMtQ_rg=",
     "title": "Rice",
     "category": "Grains",
-    "quantity": "10 kg"
+    "quantity": "10 kg",
+    "description": "Rice is a staple food in many cultures around the world. It is a versatile grain that can be cooked in various ways and used in a wide range of dishes, from savory to sweet. Your donation of rice will help provide essential nutrition to individuals and families in need, supporting food security and alleviating hunger."
   },
   {
     "id": 2,
     "image": "https://media.istockphoto.com/id/614871876/photo/apple-isolated-on-wood-background.webp?b=1&s=170667a&w=0&k=20&c=6vIucKgQ0SOR-RJ5OmB06PXPPoH-1dgGkZLQglDU9_s=",
     "title": "Apples",
     "category": "Fruits",
-    "quantity": "5 kg"
+    "quantity": "5 kg",
+    "description": "Apples are a delicious and nutritious fruit that are rich in vitamins, fiber, and antioxidants. They are known for their crisp texture and sweet flavor, making them a favorite snack for many people. Your donation of apples will provide individuals and families with a healthy and refreshing fruit option, promoting overall health and well-being."
   },
   {
     "id": 3,
     "image": "https://media.istockphoto.com/id/1478404230/photo/blurred-image-of-a-young-woman-holding-and-showing-a-glass-of-fresh-milk.webp?b=1&s=170667a&w=0&k=20&c=utHH-1ZigWKfYQXpfgqlFrm5CB_NRIRYRdorhdmLUc8=",
     "title": "Milk",
     "category": "Dairy",
-    "quantity": "3 liters"
+    "quantity": "3 liters",
+    "description": " Milk is a nutritious beverage that is rich in calcium, protein, and other essential nutrients. It is an important part of a balanced diet and is especially beneficial for children, pregnant women, and older adults. Your donation of milk will provide individuals with a vital source of nutrition, supporting their growth, development, and overall health."
   },
   {
     "id": 4,
     "image": "https://media.istockphoto.com/id/842797430/photo/dietary-fiber-food-still-life.webp?b=1&s=170667a&w=0&k=20&c=WeIaQxCqPwfzWNpm8E3CrrtDSfoxsI6dGVE_szRRcaU=",
     "title": "Bread",
     "category": "Bakery",
-    "quantity": "20 loaves"
+    "quantity": "20 loaves",
+    "description": "Bread is a staple food made from flour, water, and yeast, often enjoyed as a part of breakfast or as a sandwich component. Your donation of bread will provide individuals and families with a source of carbohydrates and energy, helping to alleviate hunger and support nutritional needs."
   },
   {
     "id": 5,
     "image": "https://media.istockphoto.com/id/1323003448/photo/fresh-raw-chicken-on-a-rustic-wooden-table.webp?b=1&s=170667a&w=0&k=20&c=oqetNYKOw_ABItXaoST4aMtD6gLdfa__mn0W2hhMMp0=",
     "title": "Chicken",
     "category": "Meat",
-    "quantity": "2 kg"
+    "quantity": "2 kg",
+    "description": "Chicken is a versatile and nutritious source of protein that can be prepared in various ways, such as grilling, roasting, or frying. Your donation of chicken will provide individuals and families with a delicious and filling meal option, contributing to their overall health and well-being."
   },
   {
     "id": 6,
     "image": "https://media.istockphoto.com/id/1424580892/photo/potatoes-sack.webp?b=1&s=170667a&w=0&k=20&c=rUWLGmQFkFfdYYIkLhS-X6E_Yc5w8aJgVVcRyBiwgXU=",
     "title": "Potatoes",
     "category": "Vegetables",
-    "quantity": "5 kg"
+    "quantity": "5 kg",
+    "description": "Potatoes are a versatile and nutrient-rich vegetable that can be enjoyed in numerous dishes, including mashed potatoes, roasted potatoes, and potato soup. Your donation of potatoes will provide individuals and families with a source of carbohydrates, vitamins, and minerals, supporting their nutritional needs."
   },
   {
     "id": 7,
     "image": "https://media.istockphoto.com/id/1144642673/photo/young-woman-in-a-gray-apron-preparing-pasta.webp?b=1&s=170667a&w=0&k=20&c=dBK8DzlDEd2ouXYdmZSSn8fyxX90qjwkcoTdFdOKItk=",
     "title": "Pasta",
     "category": "Grains",
-    "quantity": "3 kg"
+    "quantity": "3 kg",
+    "description": "Pasta is a versatile and convenient food made from wheat flour, water, and sometimes eggs, often enjoyed as a staple in many cuisines around the world. Your donation of pasta will provide individuals and families with a filling and satisfying meal option, contributing to their overall well-being."
   },
   {
     "id": 8,
     "image": "https://media.istockphoto.com/id/1377400583/photo/woman-hand-cutting-camembert-on-wooden-board.webp?b=1&s=170667a&w=0&k=20&c=1w5wv42Bh1DTAA048-CUUJgTW-zw47gd_p-6DaOkOVQ=",
     "title": "Cheese",
     "category": "Dairy",
-    "quantity": "500 grams"
+    "quantity": "500 grams",
+    "description": " Cheese is a dairy product made from milk that is enjoyed for its rich flavor and versatility in cooking. It is a good source of calcium, protein, and other essential nutrients. Your donation of cheese will provide individuals and families with a delicious and nutritious addition to their meals, supporting their overall health."
   },
   {
     "id": 9,
     "image": "https://media.istockphoto.com/id/173652175/photo/can-of-baked-beans.webp?b=1&s=170667a&w=0&k=20&c=JladC4eJYhE-MnIXMSA9dnK7T157RjhoiSv4z9fmAww=",
     "title": "Canned Beans",
     "category": "Canned Foods",
-    "quantity": "6 cans"
+    "quantity": "6 cans",
+    "description": "Canned beans are a convenient and nutritious pantry staple that can be used in various dishes, including soups, salads, and casseroles. They are rich in protein, fiber, and other essential nutrients. Your donation of canned beans will provide individuals and families with a versatile and filling food option, supporting their nutritional needs."
   },
   {
     "id": 10,
     "image": "https://media.istockphoto.com/id/154918048/photo/clementines.webp?b=1&s=170667a&w=0&k=20&c=9C66j9wPDfJlC3oi25NRGYEyeJfvIdOPw5cZLezIY24=",
     "title": "Oranges",
     "category": "Fruits",
-    "quantity": "2 kg"
+    "quantity": "2 kg",
+    "description": " Oranges are a refreshing and vitamin-rich fruit that are enjoyed for their sweet and tangy flavor. They are a good source of vitamin C, fiber, and antioxidants. Your donation of oranges will provide individuals and families with a healthy and hydrating fruit option, supporting their overall health and well-being."
   },
   {
     "id": 11,
     "image": "https://media.istockphoto.com/id/1469812495/photo/japanese-food-concept-salmon-sashimi-on-a-bowl-with-ice.webp?b=1&s=170667a&w=0&k=20&c=pVVssFYrbO8vl9f5MH5ggjMctxcQaPlOkx2Ms7gjvJ4=",
     "title": "Salmon",
     "category": "Seafood",
-    "quantity": "1 kg"
+    "quantity": "1 kg",
+    "description": " Salmon is a nutritious and flavorful seafood that is rich in omega-3 fatty acids, protein, and essential nutrients. It is often enjoyed grilled, baked, or smoked and is known for its delicate flavor and tender texture. Your donation of salmon will provide individuals and families with a delicious and nutrient-rich source of protein, supporting their overall health and well-being."
   },
   {
     "id": 12,
     "image": "https://media.istockphoto.com/id/1206682746/photo/pouring-extra-virgin-olive-oil-in-a-glass-bowl.webp?b=1&s=170667a&w=0&k=20&c=mS810bCCDD6VzrI5iHfDfoxcXz6aGHsikLhPIWHu964=",
     "title": "Olive Oil",
     "category": "Oils",
-    "quantity": "1 liter"
+    "quantity": "1 liter",
+    "description": "Olive oil is a versatile and heart-healthy cooking oil that is rich in monounsaturated fats and antioxidants. It is commonly used in Mediterranean cuisine and is prized for its delicate flavor and health benefits. Your donation of olive oil will provide individuals and families with a nutritious and flavorful cooking ingredient, supporting their overall well-being."
   }
 ]

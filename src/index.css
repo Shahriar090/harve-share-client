@@ -25,4 +25,8 @@ body {
     @apply border border-[#FF4800] rounded-full;
     @apply hover:bg-[#FF4800] text-white font-semibold;
   }
+  .btn-ghost {
+    @apply px-6 py-3 inline-flex items-center justify-center;
+    @apply text-black font-semibold;
+  }
 }

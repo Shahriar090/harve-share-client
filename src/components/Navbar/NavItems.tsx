@@ -5,7 +5,7 @@ export const navItems = [
   },
   {
     label: "All Supplies",
-    link: "all-supplies",
+    link: "supplies",
   },
   {
     label: "Supply Details",

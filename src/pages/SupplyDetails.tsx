@@ -1,8 +1,66 @@
+// SupplyDetails.tsx
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import Container from "../shared/Container/Container";
+
+interface Supply {
+  id: number;
+  image: string;
+  title: string;
+  category: string;
+  quantity: string;
+  description: string;
+}
+
 const SupplyDetails = () => {
+  const { id } = useParams<{ id: string }>();
+  const [supply, setSupply] = useState<Supply | null>(null);
+
+  useEffect(() => {
+    fetch("../../public/suppliesData.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const foundSupply = data.find(
+          (item: Supply) => item.id === parseInt(id)
+        );
+        setSupply(foundSupply);
+      });
+  }, [id]);
+
+  if (!supply) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <div>
-      <h1>Supply details</h1>
-    </div>
+    <Container>
+      <div className="flex items-center justify-center w-full h-screen">
+        <div className="supply-details flex  p-5 cursor-pointer rounded-md bg-white border">
+          <div className="img flex-[1]">
+            <picture>
+              <img src={supply.image} alt="Supply Image" />
+            </picture>
+          </div>
+          <div className="details flex-[1] font-medium text-black text-lg space-y-5">
+            <p className="">{supply.title}</p>
+            <p className="">
+              Category : <span>{supply.category}</span>
+            </p>
+            <p>
+              Quantity : <span>{supply.quantity}</span>
+            </p>
+            <p>
+              Description : <span>{supply.description}</span>
+            </p>
+            <div className="details-btn">
+              <Link to={`supply-details/${id}`}>
+                {" "}
+                <button className="btn-primary-orange">Donate Now</button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Container>
   );
 };
 

@@ -1,5 +1,19 @@
-const SuppliCard = ({ supply }) => {
-  const { image, title, category, quantity } = supply;
+import { Link } from "react-router-dom";
+
+interface Supply {
+  id: number;
+  image: string;
+  title: string;
+  category: string;
+  quantity: string;
+}
+
+interface SuppliCardProps {
+  supply: Supply;
+}
+
+const SuppliCard: React.FC<SuppliCardProps> = ({ supply }) => {
+  const { id, image, title, category, quantity } = supply;
   return (
     <div className="supply-container w-full shadow-md hover:shadow-orange-600 transition-all duration-300 max-w-lg p-5 cursor-pointer rounded-md bg-white">
       <picture>
@@ -15,7 +29,10 @@ const SuppliCard = ({ supply }) => {
         </p>
       </div>
       <div className="details-btn flex justify-end">
-        <button className="btn-primary-orange">View Details</button>
+        <Link to={`supply-details/${id}`}>
+          {" "}
+          <button className="btn-primary-orange">View Details</button>
+        </Link>
       </div>
     </div>
   );

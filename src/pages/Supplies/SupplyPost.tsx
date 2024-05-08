@@ -3,15 +3,24 @@ import SuppliCard from "./SuppliCard";
 import { Navigate } from "react-router-dom";
 import Container from "../../shared/Container/Container";
 import SectionTitle from "../../shared/SectionTitle/SectionTitle";
+import { IoMdArrowForward } from "react-icons/io";
 
-const SupplyPost = () => {
-  const [supplies, setSupplies] = useState([]);
-  const [showAll, setShowAll] = useState(false);
+interface Supply {
+  id: number;
+  image: string;
+  title: string;
+  category: string;
+  quantity: string;
+}
+
+const SupplyPost: React.FC = () => {
+  const [supplies, setSupplies] = useState<Supply[]>([]);
+  const [showAll, setShowAll] = useState<boolean>(false);
 
   useEffect(() => {
     fetch("suppliesData.json")
       .then((res) => res.json())
-      .then((data) => setSupplies(data));
+      .then((data: Supply[]) => setSupplies(data));
   }, []);
 
   const handleViewAll = () => {
@@ -29,13 +38,16 @@ const SupplyPost = () => {
               .slice(0, 6)
               .map((supply) => <SuppliCard key={supply.id} supply={supply} />)}
       </div>
-      <div className="flex justify-center py-5">
+      <div className="flex justify-end py-5">
         {!showAll && (
-          <button onClick={handleViewAll} className="btn-primary">
-            Show All
+          <button onClick={handleViewAll} className="btn-ghost">
+            Show All{" "}
+            <span>
+              <IoMdArrowForward className="text-xl ml-1" />
+            </span>
           </button>
         )}
-        {showAll && <Navigate to="/all-supplies" />}
+        {showAll && <Navigate to="/supplies" />}
       </div>
     </Container>
   );

@@ -1,8 +1,17 @@
 import { useEffect, useState } from "react";
 import Container from "../shared/Container/Container";
+import { Link } from "react-router-dom";
+
+interface Supply {
+  id: number;
+  image: string;
+  title: string;
+  category: string;
+  quantity: string;
+}
 
 const AllSuplies = () => {
-  const [supplies, setSupplies] = useState([]);
+  const [supplies, setSupplies] = useState<Supply[]>([]);
   useEffect(() => {
     fetch("suppliesData.json")
       .then((res) => res.json())
@@ -29,7 +38,10 @@ const AllSuplies = () => {
               </p>
             </div>
             <div className="details-btn flex justify-end">
-              <button className="btn-primary-orange">View Details</button>
+              <Link to={`/supply-details/${supply.id}`}>
+                {" "}
+                <button className="btn-primary-orange">View Details</button>
+              </Link>
             </div>
           </div>
         ))}
