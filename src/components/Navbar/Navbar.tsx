@@ -9,36 +9,20 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
   return (
-    <header className="w-full h-12 fixed top-0 left-0 right-0 z-50 bg-[#FF4800]">
-      {/* contact and donate button start */}
-      <div className="hidden lg:flex justify-between items-center h-full max-w-screen-xl mx-auto">
-        <div className="contacts flex text-white gap-5 font-medium">
-          <p>
-            <span>Email</span> harveshare@gmail.com
-          </p>
-          <p>
-            <span>Phone</span> +88 01865017300
-          </p>
-        </div>
-        <div className="donate-btn">
-          <button className="btn-primary">Donate Now</button>
-        </div>
-      </div>
-      {/* contact and donate button end */}
-
+    <header className="w-full h-14 fixed top-0 left-0 right-0 z-50 bg-[#FF4800]">
       {/* main nav contents start*/}
-      <nav className="w-full max-w-screen-xl mx-auto h-full flex items-center lg:py-8">
+      <nav className="w-full max-w-screen-xl mx-auto h-full flex items-center ">
         <div className="nav-container flex justify-between w-full items-center px-2 lg:px-0">
           <div className="logo">
             <h1 className="text-2xl md:text-3xl font-semibold">
-              Harve <span className="text-white lg:text-[#FF4800]">Share</span>
+              Harve <span className="text-white">Share</span>
             </h1>
           </div>
           <div className="hidden nav-items lg:flex gap-5">
             {navItems.map((item, index) => (
               <li
                 key={index}
-                className="uppercase font-medium hover:text-[#FF4800] transition-all duration-300"
+                className="uppercase font-medium text-white hover:text-black transition-all duration-300"
               >
                 <Link to={item.link}>{item.label}</Link>
               </li>
