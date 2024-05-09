@@ -1,34 +1,18 @@
-// SupplyDetails.tsx
-import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Container from "../shared/Container/Container";
-
-interface Supply {
-  id: number;
-  image: string;
-  title: string;
-  category: string;
-  quantity: string;
-  description: string;
-}
+import { useGetSupplyByIdQuery } from "../redux/api/api";
 
 const SupplyDetails = () => {
   const { id } = useParams<{ id: string }>();
-  const [supply, setSupply] = useState<Supply | null>(null);
 
-  useEffect(() => {
-    fetch("../../public/suppliesData.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const foundSupply = data.find(
-          (item: Supply) => item.id === parseInt(id)
-        );
-        setSupply(foundSupply);
-      });
-  }, [id]);
-
-  if (!supply) {
-    return <div>Loading...</div>;
+  const { data: supply, isError, isLoading } = useGetSupplyByIdQuery(id);
+  console.log(supply, "single data details");
+  if (isLoading) {
+    return (
+      <div className="h-screen text-4xl font-semibold text-black flex items-center justify-center">
+        Loading....
+      </div>
+    );
   }
 
   return (

@@ -7,10 +7,7 @@ export const navItems = [
     label: "All Supplies",
     link: "supplies",
   },
-  {
-    label: "Supply Details",
-    link: "supply-details",
-  },
+
   {
     label: "Login",
     link: "login",

@@ -1,28 +1,24 @@
-import { useEffect, useState } from "react";
 import Container from "../shared/Container/Container";
 import { Link } from "react-router-dom";
-
-interface Supply {
-  id: number;
-  image: string;
-  title: string;
-  category: string;
-  quantity: string;
-}
+import { useGetSuppliesQuery } from "../redux/api/api";
 
 const AllSuplies = () => {
-  const [supplies, setSupplies] = useState<Supply[]>([]);
-  useEffect(() => {
-    fetch("suppliesData.json")
-      .then((res) => res.json())
-      .then((data) => setSupplies(data));
-  }, []);
+  // after implementing RTK query
+  const { data: supplies, isError, isLoading } = useGetSuppliesQuery(undefined);
+  console.log(supplies);
+  if (isLoading) {
+    return (
+      <div className="h-screen text-4xl font-semibold text-black flex items-center justify-center">
+        Loading....
+      </div>
+    );
+  }
   return (
     <Container>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {supplies.map((supply) => (
+        {supplies?.map((supply) => (
           <div
-            key={supply.id}
+            key={supply._id}
             className="supply-container w-full shadow-md hover:shadow-orange-600 transition-all duration-300 max-w-lg p-5 cursor-pointer rounded-md bg-white"
           >
             <picture>
@@ -38,7 +34,7 @@ const AllSuplies = () => {
               </p>
             </div>
             <div className="details-btn flex justify-end">
-              <Link to={`/supply-details/${supply.id}`}>
+              <Link to={`/supply-details/${supply._id}`}>
                 {" "}
                 <button className="btn-primary-orange">View Details</button>
               </Link>
