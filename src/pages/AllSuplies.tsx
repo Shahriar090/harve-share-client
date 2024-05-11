@@ -4,8 +4,8 @@ import { useGetSuppliesQuery } from "../redux/api/api";
 
 const AllSuplies = () => {
   // after implementing RTK query
-  const { data: supplies, isError, isLoading } = useGetSuppliesQuery(undefined);
-  console.log(supplies);
+  const { data: supplies, isLoading } = useGetSuppliesQuery(undefined);
+
   if (isLoading) {
     return (
       <div className="h-screen text-4xl font-semibold text-black flex items-center justify-center">

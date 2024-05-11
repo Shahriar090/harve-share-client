@@ -1,53 +1,45 @@
-import { useEffect, useState } from "react";
+import { useGetSuppliesQuery } from "../../redux/api/api";
 import SuppliCard from "./SuppliCard";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Container from "../../shared/Container/Container";
 import SectionTitle from "../../shared/SectionTitle/SectionTitle";
 import { IoMdArrowForward } from "react-icons/io";
 
-interface Supply {
-  id: number;
-  image: string;
-  title: string;
-  category: string;
-  quantity: string;
-}
-
 const SupplyPost: React.FC = () => {
-  const [supplies, setSupplies] = useState<Supply[]>([]);
-  const [showAll, setShowAll] = useState<boolean>(false);
+  const navigate = useNavigate();
+  const { data: supplies, isError, isLoading } = useGetSuppliesQuery(undefined);
 
-  useEffect(() => {
-    fetch("suppliesData.json")
-      .then((res) => res.json())
-      .then((data: Supply[]) => setSupplies(data));
-  }, []);
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
-  const handleViewAll = () => {
-    setShowAll(true);
+  if (isError || !supplies) {
+    return <div>Error fetching supplies data.</div>;
+  }
+
+  const suppliesToShow = supplies.slice(0, 6);
+
+  const handleShowAll = () => {
+    navigate("/supplies");
   };
+
   return (
     <Container>
       <SectionTitle heading="Our Top Supplies" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {showAll
-          ? supplies.map((supply) => (
-              <SuppliCard key={supply.id} supply={supply} />
-            ))
-          : supplies
-              .slice(0, 6)
-              .map((supply) => <SuppliCard key={supply.id} supply={supply} />)}
+        {suppliesToShow?.map((supply) => (
+          <SuppliCard key={supply._id} supply={supply} />
+        ))}
       </div>
       <div className="flex justify-end py-5">
-        {!showAll && (
-          <button onClick={handleViewAll} className="btn-ghost">
+        {supplies.length > 6 && (
+          <button onClick={handleShowAll} className="btn-ghost">
             Show All{" "}
             <span>
               <IoMdArrowForward className="text-xl ml-1" />
             </span>
           </button>
         )}
-        {showAll && <Navigate to="/supplies" />}
       </div>
     </Container>
   );

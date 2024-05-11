@@ -3,10 +3,14 @@ import AllSuplies from "../pages/AllSuplies";
 import SupplyDetails from "../pages/SupplyDetails";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
-import Dashboard from "../pages/Dashboard";
 
 import App from "../App";
 import Home from "../pages/Home";
+import Dashboard from "../components/layouts/Dashboard/Dashboard";
+import Supplies from "../components/layouts/Dashboard/DashboardPages/Supplies";
+import CreateSupply from "../components/layouts/Dashboard/DashboardPages/CreateSupply";
+import DashHome from "../components/layouts/Dashboard/DashboardPages/DashHome";
+import UpdateSupply from "../components/layouts/Dashboard/DashboardPages/UpdateSupply";
 
 export const router = createBrowserRouter([
   {
@@ -33,10 +37,29 @@ export const router = createBrowserRouter([
         path: "login",
         element: <Login />,
       },
+    ],
+  },
+  // different layout for dashboard
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+    children: [
       {
-        path: "dashboard",
-        element: <Dashboard />,
+        index: true,
+        element: <DashHome />,
+      },
+      {
+        path: "create-supply",
+        element: <CreateSupply />,
+      },
+      {
+        path: "supplies",
+        element: <Supplies />,
       },
     ],
+  },
+  {
+    path: "update-supply/:id",
+    element: <UpdateSupply />,
   },
 ]);
