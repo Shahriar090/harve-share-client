@@ -4,7 +4,7 @@ export const baseApi = createApi({
   reducerPath: "baseApi",
   baseQuery: fetchBaseQuery({
     baseUrl:
-      "https://harve-share-anqmsnp0d-shahriar090s-projects.vercel.app/api/v1/",
+      "https://harve-share-anqmsnp0d-shahriar090s-projects.vercel.app/api/v1",
   }),
   tagTypes: ["supply"],
   endpoints: (builder) => ({
