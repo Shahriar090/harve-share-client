@@ -9,12 +9,12 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
   return (
-    <header className="w-full h-14 fixed top-0 left-0 right-0 z-50 bg-[#FF4800]">
+    <header className="w-full h-16 fixed top-0 left-0 right-0 z-50 bg-[#FF4800]">
       {/* main nav contents start*/}
       <nav className="w-full max-w-screen-xl mx-auto h-full flex items-center ">
         <div className="nav-container flex justify-between w-full items-center px-2 lg:px-0">
           <div className="logo">
-            <h1 className="text-2xl md:text-3xl font-semibold">
+            <h1 className="text-3xl md:text-3xl font-semibold">
               Harve <span className="text-white">Share</span>
             </h1>
           </div>
@@ -22,7 +22,7 @@ const Navbar = () => {
             {navItems.map((item, index) => (
               <li
                 key={index}
-                className="uppercase font-medium text-white hover:text-black transition-all duration-300"
+                className="uppercase font-medium text-lg text-white hover:text-black transition-all duration-300"
               >
                 <Link to={item.link}>{item.label}</Link>
               </li>
