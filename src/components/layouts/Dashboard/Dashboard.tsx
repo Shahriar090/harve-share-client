@@ -7,7 +7,7 @@ const Dashboard = () => {
       <div className="sidebar flex-[1]">
         <Sidebar />
       </div>
-      <div className="outlet flex-[5] bg-white pt-10">
+      <div className="outlet flex-[5] bg-white">
         {/* <Navbar /> */}
         <Outlet />
       </div>

@@ -11,7 +11,7 @@ const Sidebar = () => {
   };
   return (
     <>
-      <div className="w-60 h-screen fixed bg-slate-100  pt-10 hidden lg:block">
+      <div className="w-60 h-screen fixed bg-slate-50  pt-10 hidden lg:block">
         <div className="dashboard-items flex flex-col gap-4">
           {dashboardItems.map((item, index) => (
             <li

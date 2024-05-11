@@ -51,7 +51,7 @@ const data = [
 const DashHome = () => {
   return (
     <Container>
-      <SectionTitle heading="Overview Of Our All Categories" />{" "}
+      <SectionTitle heading="Category We Covered Mostly" />{" "}
       <ResponsiveContainer width="100%" height={400}>
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
           <PolarGrid />
