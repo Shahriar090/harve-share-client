@@ -8,8 +8,8 @@ const Dashboard = () => {
       <div className="sidebar flex-[1]">
         <Sidebar />
       </div>
-      <div className="outlet flex-[5] bg-white pt-10 pl-5">
-        <Navbar />
+      <div className="outlet flex-[5] bg-white pt-10">
+        {/* <Navbar /> */}
         <Outlet />
       </div>
     </div>

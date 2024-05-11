@@ -6,6 +6,8 @@ import {
   PolarRadiusAxis,
   ResponsiveContainer,
 } from "recharts";
+import Container from "../../../../shared/Container/Container";
+import SectionTitle from "../../../../shared/SectionTitle/SectionTitle";
 
 const data = [
   {
@@ -48,8 +50,8 @@ const data = [
 
 const DashHome = () => {
   return (
-    <div className="">
-      {" "}
+    <Container>
+      <SectionTitle heading="Overview Of Our All Categories" />{" "}
       <ResponsiveContainer width="100%" height={400}>
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
           <PolarGrid />
@@ -64,7 +66,7 @@ const DashHome = () => {
           />
         </RadarChart>
       </ResponsiveContainer>
-    </div>
+    </Container>
   );
 };
 

@@ -10,7 +10,11 @@ const UpdateSupply = () => {
   // update mutation hook
   const [updatePost, { isError }] = useUpdatePostMutation();
   if (isLoading) {
-    return <p>Loding....</p>;
+    return <p>Loading....</p>;
+  }
+
+  if (isError) {
+    return <p>Error...</p>;
   }
   const { _id, image, title, category, description, quantity } = data;
   // console.log(_id);
