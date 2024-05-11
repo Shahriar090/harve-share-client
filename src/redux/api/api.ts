@@ -3,8 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const baseApi = createApi({
   reducerPath: "baseApi",
   baseQuery: fetchBaseQuery({
-    baseUrl:
-      "https://harve-share-anqmsnp0d-shahriar090s-projects.vercel.app/api/v1",
+    baseUrl: "https://harve-share.vercel.app/api/v1",
   }),
   tagTypes: ["supply"],
   endpoints: (builder) => ({
