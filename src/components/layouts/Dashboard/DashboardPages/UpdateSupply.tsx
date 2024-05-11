@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { FormEvent } from "react";
 import {
   useGetSinglePostQuery,
   useUpdatePostMutation,
@@ -19,15 +20,19 @@ const UpdateSupply = () => {
   const { _id, image, title, category, description, quantity } = data;
   // console.log(_id);
 
-  const handleUpdateSupply = (event) => {
+  const handleUpdateSupply = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const form = event.target;
+    const form = event.currentTarget as HTMLFormElement;
 
-    const image = form.image.value;
-    const category = form.category.value;
-    const title = form.title.value;
-    const quantity = form.quantity.value;
-    const description = form.description.value;
+    const image = (form.elements.namedItem("image") as HTMLInputElement).value;
+    const category = (form.elements.namedItem("category") as HTMLInputElement)
+      .value;
+    const title = (form.elements.namedItem("title") as HTMLInputElement).value;
+    const quantity = (form.elements.namedItem("quantity") as HTMLInputElement)
+      .value;
+    const description = (
+      form.elements.namedItem("description") as HTMLInputElement
+    ).value;
 
     const updatedPost = {
       id: _id,

@@ -4,8 +4,18 @@ import {
   useGetPostsQuery,
 } from "../../../../redux/api/api";
 
+interface Post {
+  _id: string;
+  image: string;
+  title: string;
+  category: string;
+  quantity: number;
+}
 const Supplies = () => {
-  const { data, isLoading } = useGetPostsQuery(undefined);
+  const { data, isLoading } = useGetPostsQuery(undefined) as {
+    data: Post[];
+    isLoading: boolean;
+  };
 
   const [deletePost] = useDeletePostMutation();
 
@@ -17,7 +27,7 @@ const Supplies = () => {
     );
   }
 
-  const handleDelete = async (postId) => {
+  const handleDelete = async (postId: string) => {
     // Show confirmation dialog
     const confirmDelete = window.confirm(
       "Are you sure you want to delete this post?"
