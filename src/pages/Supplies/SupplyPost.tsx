@@ -5,6 +5,14 @@ import Container from "../../shared/Container/Container";
 import SectionTitle from "../../shared/SectionTitle/SectionTitle";
 import { IoMdArrowForward } from "react-icons/io";
 
+interface Supply {
+  id: number;
+  _id: string;
+  image: string;
+  title: string;
+  category: string;
+  quantity: number;
+}
 const SupplyPost: React.FC = () => {
   const navigate = useNavigate();
   const { data: supplies, isError, isLoading } = useGetSuppliesQuery(undefined);
@@ -27,7 +35,7 @@ const SupplyPost: React.FC = () => {
     <Container>
       <SectionTitle heading="Our Top Supplies" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {suppliesToShow?.map((supply) => (
+        {suppliesToShow?.map((supply: Supply) => (
           <SuppliCard key={supply._id} supply={supply} />
         ))}
       </div>

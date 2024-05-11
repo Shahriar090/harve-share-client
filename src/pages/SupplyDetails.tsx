@@ -1,23 +1,11 @@
 import { useParams } from "react-router-dom";
 import Container from "../shared/Container/Container";
 import { useGetSupplyByIdQuery } from "../redux/api/api";
-import { useState } from "react";
-import Modal from "../ui/Modal";
-
-interface Supply {
-  id: number;
-  image: string;
-  title: string;
-  category: string;
-  quantity: string;
-  description: string;
-}
 
 const SupplyDetails = () => {
-  const [modal, setModal] = useState(false);
   const { id } = useParams<{ id: string }>();
 
-  const { data: supply, isError, isLoading } = useGetSupplyByIdQuery(id);
+  const { data: supply, isLoading } = useGetSupplyByIdQuery(id);
 
   if (isLoading) {
     return (
@@ -51,12 +39,7 @@ const SupplyDetails = () => {
               {supply?.description}
             </p>
             <div className="details-btn">
-              <button
-                onClick={() => setModal((prev) => !prev)}
-                className="btn-primary-orange"
-              >
-                Donate Now
-              </button>
+              <button className="btn-primary-orange">Donate Now</button>
             </div>
           </div>
         </div>

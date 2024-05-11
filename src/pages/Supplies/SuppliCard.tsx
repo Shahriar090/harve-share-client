@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 
 interface Supply {
   id: number;
+  _id: string;
   image: string;
   title: string;
   category: string;
-  quantity: string;
+  quantity: number;
 }
 
 interface SuppliCardProps {
@@ -14,6 +15,7 @@ interface SuppliCardProps {
 
 const SuppliCard: React.FC<SuppliCardProps> = ({ supply }) => {
   const { _id, image, title, category, quantity } = supply;
+  console.log(supply);
   return (
     <div className="supply-container w-full shadow-md hover:shadow-orange-600 transition-all duration-300 max-w-lg p-5 cursor-pointer rounded-md bg-white">
       <picture>

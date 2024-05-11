@@ -2,6 +2,14 @@ import Container from "../shared/Container/Container";
 import { Link } from "react-router-dom";
 import { useGetSuppliesQuery } from "../redux/api/api";
 
+interface Supply {
+  _id: string;
+  image: string;
+  title: string;
+  category: string;
+  quantity: number;
+}
+
 const AllSuplies = () => {
   // after implementing RTK query
   const { data: supplies, isLoading } = useGetSuppliesQuery(undefined);
@@ -16,7 +24,7 @@ const AllSuplies = () => {
   return (
     <Container>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {supplies?.map((supply) => (
+        {supplies?.map((supply: Supply) => (
           <div
             key={supply._id}
             className="supply-container w-full shadow-md hover:shadow-orange-600 transition-all duration-300 max-w-lg p-5 cursor-pointer rounded-md bg-white"
