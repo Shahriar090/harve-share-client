@@ -27,18 +27,18 @@ const AllSuplies = () => {
         {supplies?.map((supply: Supply) => (
           <div
             key={supply._id}
-            className="supply-container w-full shadow-md hover:shadow-orange-600 transition-all duration-300 max-w-lg p-5 cursor-pointer rounded-md bg-white"
+            className="supply-container w-full shadow-md  max-w-lg p-5 cursor-pointer rounded-md bg-white"
           >
             <picture>
               <img src={supply.image} alt="Supply Image" />
             </picture>
-            <div className="details font-medium text-black text-lg py-5">
+            <div className="details font-normal text-black text-lg py-5">
               <p className="">{supply.title}</p>
               <p className="">
                 Category : <span>{supply.category}</span>
               </p>
               <p>
-                Quantity : <span>{supply.quantity}</span>
+                Available Quantity : <span>{supply.quantity}</span>
               </p>
             </div>
             <div className="details-btn flex justify-end">
